@@ -1,0 +1,25 @@
+# =========================
+# QA
+# =========================
+
+QA_BASE_URL=
+QA_USER_EMAIL=
+QA_USER_PASSWORD=
+
+
+# =========================
+# STAGING
+# =========================
+
+STAGING_BASE_URL=
+STAGING_USER_EMAIL=
+STAGING_USER_PASSWORD=
+
+
+# =========================
+# PRODUCTION
+# =========================
+
+PROD_BASE_URL=
+PROD_USER_EMAIL=
+PROD_USER_PASSWORD=
