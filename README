@@ -1,0 +1,5 @@
+-Verify successful user registration
+-Verify successful user login
+-Verify successful product addition to the cart using search
+-Verify adding a product to the cart from the homepage
+-Verify adding a product to the cart with incremented quantity
