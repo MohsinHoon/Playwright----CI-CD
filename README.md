@@ -13,3 +13,12 @@ Cross-browser testing
 Easy-to-maintain and scalable framework structure
 
 The project demonstrates how modern QA automation can be integrated into a CI/CD workflow, enabling automated regression testing and faster feedback throughout the development lifecycle.
+
+
+## Automated Test Scenarios Covered
+
+* Verify successful user registration
+* Verify successful user login
+* Verify successful product addition to the cart
+
+
