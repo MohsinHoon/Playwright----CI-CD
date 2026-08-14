@@ -1,5 +1,74 @@
--Verify successful user registration
--Verify successful user login
--Verify successful product addition to the cart using search
--Verify adding a product to the cart from the homepage
--Verify adding a product to the cart with incremented quantity
+Registration & Login
+-Verify successful user registration ✅
+-Verify successful user login ✅
+-Verify registration with an already registered email ✅
+-Verify login with invalid credentials ✅
+-Verify login with invalid email format
+-Verify logout functionality
+-Verify user session persists after page navigation
+Search
+-Verify product search with a valid product name ✅
+-Verify search with an invalid product name
+-Verify search with an empty search field
+-Verify user can open a product from search results
+Product
+-Verify adding a product to the cart from the homepage ✅
+-Verify adding a product to the cart with incremented quantity ✅
+-Verify user can navigate to a product details page
+-Verify product details are displayed correctly
+-Verify user can add multiple different products to the cart
+-Verify product can be added to the cart from the product details page
+-Verify product quantity can be decreased in the cart
+-Verify cart item can be removed
+-Verify all cart items can be removed
+-Verify cart total updates after quantity change
+Wishlist
+-Verify user can add a product to the wishlist
+-Verify product can be removed from the wishlist
+-Verify wishlist item can be added to the cart
+Categories
+-Verify user can navigate to each product category
+-Verify user can navigate to a subcategory
+-Verify products are displayed for the selected category
+Checkout
+
+Ye must automate karna, kyun ke complete E2E flow ban jayega:
+
+-Verify user can proceed to checkout from the cart
+-Verify checkout requires login
+-Verify user can add a new billing address
+-Verify user can select an existing billing address
+-Verify shipping method selection
+-Verify payment method selection
+-Verify order can be confirmed successfully
+-Verify order confirmation message is displayed
+Mere hisaab se tumhara best automation roadmap:
+
+Phase 1 — Authentication
+
+ -Registration
+ -Login
+ -Invalid Login
+ -Logout
+
+Phase 2 — Product & Search
+ -5. Search Product
+ -6. Invalid Search
+ -7. Homepage Add to Cart
+ -8. Search Add to Cart
+ -9. Product Details Add to Cart
+
+Phase 3 — Cart
+ -10. Increment Quantity
+ -11. Decrement Quantity
+ -12. Remove Product
+ -13. Multiple Products
+ -14. Verify Cart Total
+
+Phase 4 — Wishlist
+ -15. Add to Wishlist
+ -16. Remove from Wishlist
+ -17. Wishlist to Cart
+
+Phase 5 — Complete E2E
+ -18. Login → Search Product → Add to Cart → Update Quantity → Checkout → Place Order

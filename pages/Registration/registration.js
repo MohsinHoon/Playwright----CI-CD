@@ -7,6 +7,7 @@ export class RegistrationPage {
     await this.page.goto("https://demowebshop.tricentis.com/");
     await this.page.getByRole("link", { name: "Register" }).click();
   }
+  //Verify successful user registration ✅
 
   async fillInRegistrationDetails(
     first_name,
@@ -18,7 +19,7 @@ export class RegistrationPage {
     //gender selection
     await this.page
       .locator('input[name="Gender"][type="radio"]')
-      .nth(1)
+      .nth(0)
       .check();
     //first_name
     await this.page
@@ -42,5 +43,26 @@ export class RegistrationPage {
       .pressSequentially(confirm_password);
     //register_button_clicked
     await this.page.getByRole("button", { name: "Register" }).click();
+  }
+
+  // -Verify registration with an already registered email ✅
+
+  async registerWithExistingEmail(
+    first_name,
+    last_name,
+    email,
+    password,
+    confirm_password,
+  ) {
+    await this.fillInRegistrationDetails(
+      first_name,
+      last_name,
+      email,
+      password,
+      confirm_password,
+    );
+    await expect(
+      this.page.getByText("The specified email already"),
+    ).toBeVisible();
   }
 }

@@ -9,14 +9,10 @@ export const test = base.extend({
       const loginPage = new LoginPage(page);
 
       await loginPage.navigateToTheSiteAndClickLogin();
-
-      await loginPage.fillInLoginDetail(
-        USER_EMAIL ,
-        USER_PASSWORD 
-      );
+      await loginPage.fillInLoginDetail(USER_EMAIL, USER_PASSWORD);
 
       await use(loginPage);
     },
-    { auto: true },
+    // { auto: true },
   ],
 });
