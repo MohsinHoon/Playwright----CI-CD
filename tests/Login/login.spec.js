@@ -20,4 +20,12 @@ test.describe("Login Tests", () => {
       login_test_data.invalid_password,
     );
   });
+  test("User should be able to perform logout functionality", async ({
+    page,
+  }) => {
+    const loginPage = new LoginPage(page);
+
+    await loginPage.navigateToTheSiteAndClickLogin();
+    await loginPage.nativagateToTheLogoutPage();
+  });
 });

@@ -3,9 +3,7 @@ Registration & Login
 -Verify successful user login ✅
 -Verify registration with an already registered email ✅
 -Verify login with invalid credentials ✅
--Verify login with invalid email format
--Verify logout functionality
--Verify user session persists after page navigation
+-Verify logout functionality ✅
 Search
 -Verify product search with a valid product name ✅
 -Verify search with an invalid product name

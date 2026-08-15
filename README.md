@@ -17,10 +17,17 @@ The project demonstrates how modern QA automation can be integrated into a CI/CD
 
 ## Automated Test Scenarios Covered
 
-* Verify successful user registration✅
+Registration & Login
+* Verify successful user registration ✅
 * Verify successful user login ✅
-* Verify successful product addition to the cart ✅
-* Verify registration with an already registered email✅
+* Verify registration with an already registered email ✅
 * Verify login with invalid credentials ✅
+* Verify logout functionality ✅
+
+Search
+* Verify product search with a valid product name ✅
+* Verify search with an invalid product name
+* Verify search with an empty search field
+* Verify user can open a product from search results
 
 
