@@ -4,7 +4,7 @@ import {
   USER_EMAIL,
   USER_PASSWORD,
 } from "../../config/enviroment.js";
-
+import { expect } from "@playwright/test";
 export class LoginPage {
   constructor(page) {
     this.page = page;
@@ -18,10 +18,10 @@ export class LoginPage {
   async fillInLoginDetail(email, password) {
     await this.page
       .getByRole("textbox", { name: "Email:" })
-      .pressSequentially(USER_EMAIL);
+      .pressSequentially(email);
     await this.page
       .getByRole("textbox", { name: "Password:" })
-      .pressSequentially(USER_PASSWORD);
+      .pressSequentially(password);
     await this.page.getByRole("button", { name: "Log in" }).click();
   }
   // -Verify login with invalid credentials ✅
@@ -32,7 +32,7 @@ export class LoginPage {
       this.page.getByText(
         "Login was unsuccessful. Please correct the errors and try again. The",
       ),
-    ).tobeVIsible();
+    ).toBeVisible();
   }
   //-Verify logout functionality ✅
 

@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 export class Add_To_Cart {
   constructor(page) {
     this.page = page;
@@ -24,4 +25,13 @@ export class Add_To_Cart {
     await this.page.locator("#add-to-cart-button-31").click();
   }
 
+  // Verify search with an invalid product name
+
+  async searchWithInvalidProductName(invalidProductName) {
+    await this.page
+      .locator("#small-searchterms")
+      .pressSequentially(invalidProductName);
+    await this.page.getByRole("button", { name: "Search" }).first().click();
+    await expect(this.page.locator(".search-results")).toBeVisible();
+  }
 }

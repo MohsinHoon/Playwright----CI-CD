@@ -26,8 +26,8 @@ Registration & Login
 
 Search
 * Verify product search with a valid product name ✅
-* Verify search with an invalid product name
+* Verify search with an invalid product name ✅
 * Verify search with an empty search field
-* Verify user can open a product from search results
+* Verify user can open a product from search results ✅
 
 
