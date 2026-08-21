@@ -42,5 +42,5 @@ jobs:
         run: npx playwright test
         env:
           QA_BASE_URL: ${{ secrets.QA_BASE_URL }}
-          QA_USER_EMAIL: ${{ secrets.QA_USER_EMAIL }}
-          QA_USER_PASSWORD: ${{ secrets.QA_USER_PASSWORD }}
+          QA_USER_EMAIL: ${{ secrets['QA_USER_EMAIL'] }}
+          QA_USER_PASSWORD: ${{ secrets['QA_USER_PASSWORD'] }}
