@@ -29,18 +29,18 @@ jobs:
 
       - name: Debug environment variables
         run: |
-          if [ -n "$BASE_URL" ]; then
-            echo "BASE_URL is available"
+          if [ -n "$QA_BASE_URL" ]; then
+            echo "QA_BASE_URL is available"
           else
-            echo "BASE_URL is MISSING"
+            echo "QA_BASE_URL is MISSING"
             exit 1
           fi
         env:
-          BASE_URL: ${{ secrets.BASE_URL }}
+          QA_BASE_URL: ${{ secrets.QA_BASE_URL }}
 
       - name: Run Playwright tests
         run: npx playwright test
         env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          USER_EMAIL: ${{ secrets.USER_EMAIL }}
-          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          QA_BASE_URL: ${{ secrets.QA_BASE_URL }}
+          QA_USER_EMAIL: ${{ secrets.QA_USER_EMAIL }}
+          QA_USER_PASSWORD: ${{ secrets.QA_USER_PASSWORD }}
