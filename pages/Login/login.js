@@ -18,10 +18,10 @@ export class LoginPage {
   async fillInLoginDetail(email, password) {
     await this.page
       .getByRole("textbox", { name: "Email:" })
-      .pressSequentially(email);
+      .fill(email);
     await this.page
       .getByRole("textbox", { name: "Password:" })
-      .pressSequentially(password);
+      .fill(password);
     await this.page.getByRole("button", { name: "Log in" }).click();
   }
   // -Verify login with invalid credentials ✅
