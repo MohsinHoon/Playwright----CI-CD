@@ -8,7 +8,7 @@ export class Add_To_Cart {
   async addProductsToCartViaSearching(itemsearch) {
     await this.page.locator("#small-searchterms").pressSequentially(itemsearch);
     await this.page.getByRole("button", { name: "Search" }).click();
-    await this.page.getByRole("button", { name: "Add to cart" }).click();
+    await this.page.getByRole("button", { name: "Add to cart" }).first().click();
   }
 
   async addProductToCartFromHomePage() {
