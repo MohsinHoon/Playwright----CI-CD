@@ -85,8 +85,10 @@ export class Add_To_Cart {
         }),
       },
 
-      productTWO: this.page
-       .getByRole('link', { name: '14.1-inch Laptop', exact: true }),
+      productTWO: this.page.getByRole("link", {
+        name: "14.1-inch Laptop",
+        exact: true,
+      }),
       productTHREE: this.page.getByRole("link", {
         name: "Build your own cheap computer",
         exact: true,
@@ -102,5 +104,18 @@ export class Add_To_Cart {
     await this.page.goBack();
     await products.productTHREE.click();
     await this.page.locator("#add-to-cart-button-72").click();
+  }
+
+  // -Verify product quantity can be decreased in the cart
+
+  async decreaseProductQuantityInCart(decresed_Quantity) {
+    await this.page.getByRole("link", { name: "Shopping cart (210)" }).click();
+    await this.page
+      .getByRole("row", { name: "Picture of 14.1-inch Laptop" })
+      .getByRole("checkbox")
+      .check();
+    await this.page
+      .locator('input[name="itemquantity6986257"]')
+      .fill(decresed_Quantity);
   }
 }

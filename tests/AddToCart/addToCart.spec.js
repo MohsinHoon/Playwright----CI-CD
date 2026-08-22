@@ -80,4 +80,13 @@ test.describe("Add To Cart Tests", () => {
       addTOCartData.recipientEmail,
     );
   });
+  test("User should be able to decresed the quantity if products", async ({
+    page,
+  }) => {
+    const addtocart = new Add_To_Cart(page);
+
+    await addtocart.decreaseProductQuantityInCart(
+      addTOCartData.decresedQuantity,
+    );
+  });
 });
