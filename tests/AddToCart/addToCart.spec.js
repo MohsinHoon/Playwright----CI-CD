@@ -43,4 +43,12 @@ test.describe("Add To Cart Tests", () => {
       addTOCartData.invalid_product_name,
     );
   });
+  test("User should able to navigate to the product details page", async ({
+    page,
+  }) => {
+    const addtocart = new Add_To_Cart(page);
+
+    await addtocart.navigateToProductDetailsPage();
+  });
+
 });

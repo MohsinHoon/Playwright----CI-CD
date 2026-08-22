@@ -8,7 +8,10 @@ export class Add_To_Cart {
   async addProductsToCartViaSearching(itemsearch) {
     await this.page.locator("#small-searchterms").pressSequentially(itemsearch);
     await this.page.getByRole("button", { name: "Search" }).click();
-    await this.page.getByRole("button", { name: "Add to cart" }).first().click();
+    await this.page
+      .getByRole("button", { name: "Add to cart" })
+      .first()
+      .click();
   }
 
   async addProductToCartFromHomePage() {
@@ -33,5 +36,13 @@ export class Add_To_Cart {
       .pressSequentially(invalidProductName);
     await this.page.getByRole("button", { name: "Search" }).first().click();
     await expect(this.page.locator(".search-results")).toBeVisible();
+  }
+
+  //-Verify user can navigate to a product details page
+
+  async navigateToProductDetailsPage() {
+    await this.page
+      .getByRole("link", { name: "Picture of 14.1-inch Laptop" })
+      .click();
   }
 }
