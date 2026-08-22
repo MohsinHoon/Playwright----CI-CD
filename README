@@ -6,15 +6,15 @@ Registration & Login
 -Verify logout functionality ✅
 Search
 -Verify product search with a valid product name ✅
--Verify search with an invalid product name
--Verify search with an empty search field
--Verify user can open a product from search results
+-Verify search with an invalid product name ✅
+-Verify search with an empty search field ✅
+-Verify user can open a product from search results ✅
 Product
 -Verify adding a product to the cart from the homepage ✅
 -Verify adding a product to the cart with incremented quantity ✅
 -Verify user can navigate to a product details page ✅
--Verify product details are displayed correctly
--Verify user can add multiple different products to the cart
+-Verify product details are displayed correctly ✅
+-Verify user can add multiple different products to the cart ✅ 
 -Verify product can be added to the cart from the product details page
 -Verify product quantity can be decreased in the cart
 -Verify cart item can be removed

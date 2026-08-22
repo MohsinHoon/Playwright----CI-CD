@@ -9,6 +9,7 @@ test.beforeEach(async ({ page }) => {
   await loginPage.navigateToTheSiteAndClickLogin();
   await loginPage.fillInLoginDetail(USER_EMAIL, USER_PASSWORD);
 });
+
 test.describe("Add To Cart Tests", () => {
   test("User Should be Able To Add Products to the Cart Successfully", async ({
     page,
@@ -43,6 +44,13 @@ test.describe("Add To Cart Tests", () => {
       addTOCartData.invalid_product_name,
     );
   });
+  test("User should be able to search with an Empty field", async ({
+    page,
+  }) => {
+    const addtocart = new Add_To_Cart(page);
+
+    await addtocart.searchWithEmptySearchFields();
+  });
   test("User should able to navigate to the product details page", async ({
     page,
   }) => {
@@ -51,4 +59,25 @@ test.describe("Add To Cart Tests", () => {
     await addtocart.navigateToProductDetailsPage();
   });
 
+  test("User should be able to verify the product details", async ({
+    page,
+  }) => {
+    const addtocart = new Add_To_Cart(page);
+
+    await addtocart.verifyProductDetaisAreDisplayedCorrectly(
+      addTOCartData.product_title,
+      addTOCartData.product_price,
+      addTOCartData.product_description,
+    );
+  });
+  test("User should be able to add multiple products to the cart", async ({
+    page,
+  }) => {
+    const addtocart = new Add_To_Cart(page);
+
+    await addtocart.addMultipleProductsToCart(
+      addTOCartData.recipientName,
+      addTOCartData.recipientEmail,
+    );
+  });
 });

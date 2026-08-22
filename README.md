@@ -30,5 +30,7 @@ Search
 * Verify search with an empty search field
 * Verify user can open a product from search results ✅
 * Verify user can navigate to a product details page ✅
+* Verify product details are displayed correctly ✅
+* Verify user can add multiple different products to the cart ✅ 
 
 
