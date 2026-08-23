@@ -109,7 +109,7 @@ export class Add_To_Cart {
   // -Verify product quantity can be decreased in the cart
 
   async decreaseProductQuantityInCart(decresed_Quantity) {
-    await this.page.getByRole("link", { name: "Shopping cart (210)" }).click();
+    await this.page.locator('.cart-label').first().click();
     await this.page
       .getByRole("row", { name: "Picture of 14.1-inch Laptop" })
       .getByRole("checkbox")
