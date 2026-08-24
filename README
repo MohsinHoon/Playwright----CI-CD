@@ -17,20 +17,22 @@ Product
 -Verify user can add multiple different products to the cart ✅ 
 -Verify product can be added to the cart from the product details page ✅
 -Verify product quantity can be decreased in the cart ✅
--Verify cart item can be removed
--Verify all cart items can be removed
--Verify cart total updates after quantity change
+-Verify cart item can be removed ✅
+-Verify all cart items can be removed ✅
+
 Wishlist
 -Verify user can add a product to the wishlist
 -Verify product can be removed from the wishlist
 -Verify wishlist item can be added to the cart
+
 Categories
 -Verify user can navigate to each product category
 -Verify user can navigate to a subcategory
 -Verify products are displayed for the selected category
+
 Checkout
 
-Ye must automate karna, kyun ke complete E2E flow ban jayega:
+These must be automated:
 
 -Verify user can proceed to checkout from the cart
 -Verify checkout requires login
@@ -40,7 +42,7 @@ Ye must automate karna, kyun ke complete E2E flow ban jayega:
 -Verify payment method selection
 -Verify order can be confirmed successfully
 -Verify order confirmation message is displayed
-Mere hisaab se tumhara best automation roadmap:
+
 
 Phase 1 — Authentication
 

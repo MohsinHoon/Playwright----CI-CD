@@ -95,13 +95,16 @@ export class Add_To_Cart {
       }),
     };
     await products.productONE.link.click();
+
     await products.productONE.recipientName.fill(recipient_Name);
     await products.productONE.recipientEmail.fill(recipient_Email);
     await this.page.locator("#add-to-cart-button-2").click();
     await this.page.goBack();
+
     await products.productTWO.click();
     await this.page.locator("#add-to-cart-button-31").click();
     await this.page.goBack();
+
     await products.productTHREE.click();
     await this.page.locator("#add-to-cart-button-72").click();
   }
@@ -109,7 +112,7 @@ export class Add_To_Cart {
   // -Verify product quantity can be decreased in the cart
 
   async decreaseProductQuantityInCart(decresed_Quantity) {
-    await this.page.locator('.cart-label').first().click();
+    await this.page.locator(".cart-label").first().click();
     await this.page
       .getByRole("row", { name: "Picture of 14.1-inch Laptop" })
       .getByRole("checkbox")
@@ -118,4 +121,34 @@ export class Add_To_Cart {
       .locator('input[name="itemquantity6986257"]')
       .fill(decresed_Quantity);
   }
+
+  // -Verify cart item can be removed
+
+  async removeCartItem(removedQuantity) {
+    await this.page.locator(".cart-label").first().click();
+    await this.page
+      .getByRole("row", { name: "Picture of $25 Virtual Gift" })
+      .getByRole("checkbox")
+      .check();
+    await this.page
+      .locator('input[name="itemquantity7020527"]')
+      .fill(removedQuantity);
+    await this.page
+      .getByRole("button", { name: "Update shopping cart" })
+      .click();
+  }
+
+  //-Verify all cart items can be removed
+
+  async removeAllCartItems(removeItemQuantity) {
+    await this.page.locator(".cart-label").first().click();
+    await this.page.locator('input[name="removefromcart"]').check();
+    await this.page
+      .locator('input[name="itemquantity7020532"]')
+      .fill(removeItemQuantity);
+    await this.page
+      .getByRole("button", { name: "Update shopping cart" })
+      .click();
+  }
+
 }
