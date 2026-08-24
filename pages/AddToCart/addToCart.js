@@ -117,38 +117,17 @@ export class Add_To_Cart {
       .getByRole("row", { name: "Picture of 14.1-inch Laptop" })
       .getByRole("checkbox")
       .check();
-    await this.page
-      .locator('input[name="itemquantity6986257"]')
-      .fill(decresed_Quantity);
+    await this.page.locator("input.qty-input").nth(0).fill(decresed_Quantity);
   }
 
-  // -Verify cart item can be removed
+  // -Verify cart Limited item can be removed
 
   async removeCartItem(removedQuantity) {
     await this.page.locator(".cart-label").first().click();
-    await this.page
-      .getByRole("row", { name: "Picture of $25 Virtual Gift" })
-      .getByRole("checkbox")
-      .check();
-    await this.page
-      .locator('input[name="itemquantity7020527"]')
-      .fill(removedQuantity);
-    await this.page
-      .getByRole("button", { name: "Update shopping cart" })
-      .click();
-  }
-
-  //-Verify all cart items can be removed
-
-  async removeAllCartItems(removeItemQuantity) {
-    await this.page.locator(".cart-label").first().click();
     await this.page.locator('input[name="removefromcart"]').check();
-    await this.page
-      .locator('input[name="itemquantity7020532"]')
-      .fill(removeItemQuantity);
+    await this.page.locator("input.qty-input").nth(0).fill(removedQuantity);
     await this.page
       .getByRole("button", { name: "Update shopping cart" })
       .click();
   }
-
 }

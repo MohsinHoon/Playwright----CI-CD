@@ -11,5 +11,4 @@ export const addTOCartData = {
   recipientEmail: "mohsin.ali@example.com",
   decresedQuantity: "5",
   removedItem: "0",
-  removedAllItems: "0",
 };

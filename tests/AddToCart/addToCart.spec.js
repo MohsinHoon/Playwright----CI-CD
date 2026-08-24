@@ -96,11 +96,4 @@ test.describe("Add To Cart Tests", () => {
 
     await addtocart.removeCartItem(addTOCartData.removedItem);
   });
-  test("User should be able to remove all items from the cart", async ({
-    page,
-  }) => {
-    const addtocart = new Add_To_Cart(page);
-
-    await addtocart.removeCartItem(addTOCartData.removedAllItems);
-  });
 });

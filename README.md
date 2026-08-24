@@ -35,4 +35,3 @@ Search
 * Verify product can be added to the cart from the product details page ✅
 * Verify product quantity can be decreased in the cart ✅
 * Verify cart item can be removed ✅
-* Verify all cart items can be removed ✅
