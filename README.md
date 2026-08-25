@@ -33,5 +33,4 @@ Search
 * Verify product details are displayed correctly ✅
 * Verify user can add multiple different products to the cart ✅ 
 * Verify product can be added to the cart from the product details page ✅
-* Verify product quantity can be decreased in the cart ✅
-* Verify cart item can be removed ✅
+

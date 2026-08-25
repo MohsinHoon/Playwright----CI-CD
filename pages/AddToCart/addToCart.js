@@ -119,15 +119,4 @@ export class Add_To_Cart {
       .check();
     await this.page.locator("input.qty-input").nth(0).fill(decresed_Quantity);
   }
-
-  // -Verify cart Limited item can be removed
-
-  async removeCartItem(removedQuantity) {
-    await this.page.locator(".cart-label").first().click();
-    await this.page.locator('input[name="removefromcart"]').check();
-    await this.page.locator("input.qty-input").nth(0).fill(removedQuantity);
-    await this.page
-      .getByRole("button", { name: "Update shopping cart" })
-      .click();
-  }
 }

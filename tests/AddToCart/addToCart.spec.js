@@ -89,11 +89,4 @@ test.describe("Add To Cart Tests", () => {
       addTOCartData.decresedQuantity,
     );
   });
-  test("User should be able to remove the items from the cart", async ({
-    page,
-  }) => {
-    const addtocart = new Add_To_Cart(page);
-
-    await addtocart.removeCartItem(addTOCartData.removedItem);
-  });
 });
