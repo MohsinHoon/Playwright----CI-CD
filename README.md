@@ -34,3 +34,5 @@ Search
 * Verify user can add multiple different products to the cart ✅ 
 * Verify product can be added to the cart from the product details page ✅
 
+Wishlist
+* Verify user can add a product to the wishlist ✅
