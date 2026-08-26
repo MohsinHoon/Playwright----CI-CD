@@ -1,4 +1,5 @@
 export const addToWishListTestData = {
-    recipient_Name: "John Doe",
-    recipient_Email: "john.doe@example.com"
-}
+  recipient_Name: "John Doe",
+  recipient_Email: "john.doe@example.com",
+  product_Name: "SmartPhone",
+};

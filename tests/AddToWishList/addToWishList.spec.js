@@ -11,11 +11,21 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Add To WishList Tests", () => {
-  test("Verify user can add a product to the wishlist", async ({ page }) => {
+  test("User can add a product to the wishlist", async ({ page }) => {
     const add_To_Wish_List = new AddToWishListPage(page);
     await add_To_Wish_List.addProductToWishList(
       addToWishListTestData.recipient_Name,
       addToWishListTestData.recipient_Email,
+      addToWishListTestData.product_Name,
     );
+  });
+  test("User can remove products from wishlist", async ({ page }) => {
+    const add_To_Wish_List = new AddToWishListPage(page);
+    await add_To_Wish_List.removeProductFromWishList();
+  });
+
+  test("User can add wishlist products to cart", async ({ page }) => {
+    const add_To_Wish_List = new AddToWishListPage(page);
+    await add_To_Wish_List.addWishListItemsToCart();
   });
 });
