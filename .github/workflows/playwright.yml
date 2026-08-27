@@ -13,11 +13,6 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1/2, 2/2]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
