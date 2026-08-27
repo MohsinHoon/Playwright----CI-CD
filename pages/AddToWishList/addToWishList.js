@@ -41,7 +41,7 @@ export class AddToWishListPage {
 
   async addWishListItemsToCart() {
     await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page.locator('input[name="addtocart"]').check();
+    await this.page.locator('input[name="addtocart"]').first().check();
     await this.page.getByRole("button", { name: "Update wishlist" }).click();
   }
 }
