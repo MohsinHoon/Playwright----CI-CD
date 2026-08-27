@@ -33,10 +33,7 @@ export class AddToWishListPage {
 
   async removeProductFromWishList() {
     await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page
-      .getByRole("row", { name: "Picture of Smartphone" })
-      .locator('input[name="removefromcart"]')
-      .check();
+    await this.page.locator('input[name="removefromcart"]').check();
     await this.page.getByRole("button", { name: "Update wishlist" }).click();
   }
 
