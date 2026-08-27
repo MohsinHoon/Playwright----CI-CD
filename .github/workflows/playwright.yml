@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main, master]
   schedule:
-    - cron: "0 0 * * *" # Runs every day at midnight
+    - cron: "0 0 * * *" # Runs every day at midnightt
 
 jobs:
   test:
