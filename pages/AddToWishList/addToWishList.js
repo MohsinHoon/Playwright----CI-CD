@@ -33,7 +33,9 @@ export class AddToWishListPage {
 
   async removeProductFromWishList() {
     await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page.locator('input[name="removefromcart"]').check();
+    await this.page
+      .locator('input[name="removefromcart"]').first()
+      .check();
     await this.page.getByRole("button", { name: "Update wishlist" }).click();
   }
 
@@ -41,7 +43,7 @@ export class AddToWishListPage {
 
   async addWishListItemsToCart() {
     await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page.locator('input[name="addtocart"]').first().check();
+    await this.page.locator('input[name="addtocart"]').check();
     await this.page.getByRole("button", { name: "Update wishlist" }).click();
   }
 }
