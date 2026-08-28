@@ -29,21 +29,19 @@ export class AddToWishListPage {
     await this.page.getByRole("button", { name: "Add to wishlist" }).click();
   }
 
-  // -Verify product can be removed from the wishlist
-
-  async removeProductFromWishList() {
-    await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page
-      .locator('input[name="removefromcart"]').first()
-      .check();
-    await this.page.getByRole("button", { name: "Update wishlist" }).click();
-  }
-
   // -Verify wishlist item can be added to the cart
 
   async addWishListItemsToCart() {
     await this.page.locator(".ico-wishlist").nth(0).click();
-    await this.page.locator('input[name="addtocart"]').check();
+    await this.page.locator('input[name="addtocart"]').first().check();
+    await this.page.getByRole("button", { name: "Update wishlist" }).click();
+  }
+
+  // -Verify product can be removed from the wishlist
+
+  async removeProductFromWishList() {
+    await this.page.locator(".ico-wishlist").nth(0).click();
+    await this.page.locator('input[name="removefromcart"]').first().check();
     await this.page.getByRole("button", { name: "Update wishlist" }).click();
   }
 }

@@ -19,13 +19,14 @@ test.describe("Add To WishList Tests", () => {
       addToWishListTestData.product_Name,
     );
   });
-  test("User can remove products from wishlist", async ({ page }) => {
-    const add_To_Wish_List = new AddToWishListPage(page);
-    await add_To_Wish_List.removeProductFromWishList();
-  });
 
   test("User can add wishlist products to cart", async ({ page }) => {
     const add_To_Wish_List = new AddToWishListPage(page);
     await add_To_Wish_List.addWishListItemsToCart();
+  });
+
+  test("User can remove products from wishlist", async ({ page }) => {
+    const add_To_Wish_List = new AddToWishListPage(page);
+    await add_To_Wish_List.removeProductFromWishList();
   });
 });
