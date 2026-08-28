@@ -38,3 +38,6 @@ Wishlist
 * Verify user can add a product to the wishlist ✅
 * Verify product can be removed from the wishlist ✅
 * Verify wishlist item can be added to the cart ✅
+
+Categories
+* Verify user can navigate to each product category ✅
