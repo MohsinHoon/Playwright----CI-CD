@@ -12,4 +12,15 @@ test.describe("Add Product From Categories Page", () => {
     const navigate_to_the_product_categories_page = new Categories_Page(page);
     await navigate_to_the_product_categories_page.navigateToTheProductviaCategories();
   });
+
+  test("User can navigate to product sub category page", async ({ page }) => {
+    const navigate_to_the_product_categories_page = new Categories_Page(page);
+    await navigate_to_the_product_categories_page.navigateToProductSubCategory();
+  });
+  test("User can be able to see the right products according to the sub category", async ({
+    page,
+  }) => {
+    const navigate_to_the_product_categories_page = new Categories_Page(page);
+    await navigate_to_the_product_categories_page.navigateToProductSubCategory();
+  });
 });
